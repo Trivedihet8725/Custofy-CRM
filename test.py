@@ -1,0 +1,1 @@
+import urllib.request, json; data=json.dumps({'name':'test','email':'t@t.com','password':'p'}).encode('utf-8'); req=urllib.request.Request('http://localhost:8000/api/auth/register', data=data, headers={'Content-Type': 'application/json'}); try: print(urllib.request.urlopen(req).read().decode())except urllib.error.HTTPError as e: print(e.read().decode())
