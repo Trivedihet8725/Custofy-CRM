@@ -32,7 +32,6 @@ app.include_router(inventory.router)
 app.include_router(payments_received.router)
 app.include_router(payments_made.router)
 
-
 @app.get("/")
 def root():
     return {"message": "Welcome to the CRM API"}
